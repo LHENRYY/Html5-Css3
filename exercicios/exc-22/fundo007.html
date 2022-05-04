@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        section#container{
+            
+            background-image: url('imagens/target001.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /*padrao do css e relativo quem esta fora tem a posiçai relativa, mas o conteudo dentro tem o padrao absolute*/
+            position: relative;
+            height: 500px;
+            padding: 10px;
+            background-color: rebeccapurple;
+
+        }
+        article#conteudo{
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+        
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            /* margin auto coloca a possiçao no meio porem no sentindo orizontal, usando position absolute em conteudo q esteja dentro, poderemos usar lef e top pra move, observaçao que ancora e a ponta esquerda no top do container*/
+            left: 50%;
+            top: 50%;
+            /*mexer no componente, podemos mover ou inclinar */
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
